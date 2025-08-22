@@ -1,0 +1,23 @@
+{
+  "name": "freedombook9-landing",
+  "version": "1.0.0",
+  "description": "Professional landing page for Freedombook9 iGaming brand",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --open=/index.html",
+    "dev": "live-server --port=8080 --open=/index.html --watch=.",
+    "build": "echo 'No build process needed for static site'"
+  },
+  "keywords": [
+    "igaming",
+    "landing-page",
+    "freedombook9",
+    "html",
+    "css"
+  ],
+  "author": "Freedombook9",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
