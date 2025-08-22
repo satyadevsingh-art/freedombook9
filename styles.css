@@ -108,11 +108,10 @@ body {
     align-items: center;
 }
 
-.logo h1 {
-    color: #1565c0;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-tagline {
