@@ -46,6 +46,10 @@
                         <i class="fab fa-whatsapp"></i>
                         Chat on WhatsApp
                     </button>
+                    <button class="btn btn-linktree btn-large linktree-btn">
+                        <i class="fas fa-link"></i>
+                        All Links
+                    </button>
                 </div>
                 <div class="hero-features">
                     <div class="feature-item">
@@ -124,6 +128,10 @@
                         <i class="fab fa-whatsapp"></i>
                         Get Support
                     </button>
+                    <button class="btn btn-linktree btn-large linktree-btn">
+                        <i class="fas fa-link"></i>
+                        All Links
+                    </button>
                 </div>
             </div>
         </div>
@@ -168,7 +176,8 @@
             gamesUrl: 'https://freedombook9.com', // Replace with your games page
             promotionsUrl: 'https://freedombook9.com', // Replace with your promotions page
             liveChatUrl: 'https://freedombook9.com/', // Replace with your live chat
-            faqUrl: 'https://freedombook9.com' // Replace with your FAQ page
+            faqUrl: 'https://freedombook9.com', // Replace with your FAQ page
+            linktreeUrl: 'https://linktr.ee/freedombook' // Replace with your Linktree URL
         };
 
         // WhatsApp button functionality
@@ -183,6 +192,13 @@
         document.querySelectorAll('.register-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 window.open(CONFIG.registerUrl, '_blank');
+            });
+        });
+
+        // Linktree button functionality
+        document.querySelectorAll('.linktree-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                window.open(CONFIG.linktreeUrl, '_blank');
             });
         });
 
