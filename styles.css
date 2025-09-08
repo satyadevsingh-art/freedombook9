@@ -364,17 +364,22 @@ body {
 /* Register Button Glow Effect */
 .register-btn {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     z-index: 1;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(64, 169, 255, 0.8);
+    text-shadow: 0 0 8px rgba(64, 169, 255, 0.8);
+    border: 1px solid rgba(64, 169, 255, 0.5);
 }
 
 .register-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(33, 150, 243, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(64, 169, 255, 1);
+    text-shadow: 0 0 15px rgba(64, 169, 255, 1);
+    border-color: rgba(64, 169, 255, 0.8);
 }
 
+.register-btn::before,
 .register-btn::after {
     content: '';
     position: absolute;
@@ -382,19 +387,53 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    border-radius: inherit;
     background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
+        45deg,
+        rgba(64, 169, 255, 0.5),
+        rgba(255, 255, 255, 0.9),
+        rgba(64, 169, 255, 0.5)
     );
-    transform: translateX(-100%);
-    transition: 0.6s;
+    background-size: 200% 200%;
     z-index: -1;
+    animation: pulse 2s infinite;
 }
 
-.register-btn:hover::after {
-    transform: translateX(100%);
+.register-btn::before {
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+.register-btn:hover::before {
+    opacity: 1;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
+}
+
+/* Add pulsing animation to the text */
+.register-btn span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover span {
+    transform: scale(1.05);
 }
 
 /* Footer */
