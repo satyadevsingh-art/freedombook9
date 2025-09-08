@@ -559,6 +559,71 @@ body {
     font-size: 14px;
 }
 
+/* Social Media Icons */
+.social-icons {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.left-icons {
+    left: 20px;
+    bottom: 20px;
+}
+
+.right-icons {
+    right: 20px;
+    bottom: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: blink 2s infinite;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.telegram {
+    background: #0088cc;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
 /* Responsive Design */
 /* Responsive Game Cards */
 @media (max-width: 1200px) {
