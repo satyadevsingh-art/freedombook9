@@ -162,7 +162,6 @@
     <script>
         // Configuration - Update these URLs with your actual links
         const CONFIG = {
-            whatsappNumber: '+918098956538', // Replace with your WhatsApp number (with country code)
             registerUrl: 'https://freedombook9.com', // Replace with your registration page
             loginUrl: 'https://freedombook9.com', // Replace with your login page
             supportUrl: 'https://freedombook9.com', // Replace with your support page
@@ -173,11 +172,14 @@
             linktreeUrl: 'https://linktr.ee/ifreedombook' // Replace with your Linktree URL
         };
 
-        // WhatsApp button functionality
+                // WhatsApp button functionality with direct wa.link URL
         document.querySelectorAll('.whatsapp-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                const message = encodeURIComponent('Hi! I\'m interested in joining Freedombook9. Can you help me get started?');
-                window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, '_blank');
+                window.open('https://wa.link/freedombookid', '_blank'); // Replace with your actual wa.link URL
+    });
+});
+
+        
             });
         });
 
