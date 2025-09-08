@@ -163,23 +163,19 @@
         // Configuration - Update these URLs with your actual links
         const CONFIG = {
             registerUrl: 'https://freedombook9.com', // Replace with your registration page
-            loginUrl: 'https://freedombook9.com', // Replace with your login page
-            supportUrl: 'https://freedombook9.com', // Replace with your support page
-            gamesUrl: 'https://freedombook9.com', // Replace with your games page
+            loginUrl: 'https://freedombook9.com',    // Replace with your login page
+            supportUrl: 'https://freedombook9.com',  // Replace with your support page
+            gamesUrl: 'https://freedombook9.com',    // Replace with your games page
             promotionsUrl: 'https://freedombook9.com', // Replace with your promotions page
             liveChatUrl: 'https://freedombook9.com/', // Replace with your live chat
-            faqUrl: 'https://freedombook9.com', // Replace with your FAQ page
+            faqUrl: 'https://freedombook9.com',      // Replace with your FAQ page
             linktreeUrl: 'https://linktr.ee/ifreedombook' // Replace with your Linktree URL
         };
 
-                // WhatsApp button functionality with direct wa.link URL
+        // WhatsApp button functionality with direct wa.link URL
         document.querySelectorAll('.whatsapp-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                window.open('https://wa.link/freedombookid', '_blank'); // Replace with your actual wa.link URL
-    });
-});
-
-        
+                window.open('https://wa.link/freedombookid', '_blank');
             });
         });
 
@@ -256,16 +252,13 @@
 
         // Smooth scrolling for remaining anchor links (if any)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            // Skip if already handled by specific handlers above
             const href = anchor.getAttribute('href');
             if (!['#games', '#promotions', '#support', '#live-chat', '#faq'].includes(href)) {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        target.scrollIntoView({ behavior: 'smooth' });
                     }
                 });
             }
